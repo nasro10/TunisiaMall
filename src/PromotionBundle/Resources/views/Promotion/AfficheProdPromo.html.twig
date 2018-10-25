@@ -1,0 +1,13 @@
+<h2>Liste des Produits</h2>
+
+
+{% for i in produit %}
+<ul class="table table-order">
+    <li >Nom du Produit: {{ i.nomP }}</li>
+    <li>Categorie du Produit: {{ i.catP }}</li>
+    <li>TVA: {{ i.tvaP }}</li>
+    <li>Disponibilité: {{ i.dispP }}</li>
+    <li>Description du Produit: {{ i.descP }}</li>
+    <li>Prix du Produit: {{ i.prixP}}Dt</li>
+</ul>
+{% endfor %}

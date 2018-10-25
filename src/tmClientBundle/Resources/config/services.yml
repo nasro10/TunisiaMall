@@ -1,0 +1,4 @@
+services:
+#    tm_client.example:
+#        class: tmClientBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

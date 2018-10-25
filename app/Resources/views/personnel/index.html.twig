@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Personnels list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Idpr</th>
+                <th>Salairepr</th>
+                <th>Cinpr</th>
+                <th>Nompr</th>
+                <th>Numpr</th>
+                <th>Typepr</th>
+                <th>Imgpr</th>
+                <th>Fichepr</th>
+                <th>Postepr</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for personnel in personnels %}
+            <tr>
+                <td><a href="{{ path('personnel_show', { 'idPr': personnel.idPr }) }}">{{ personnel.idPr }}</a></td>
+                <td>{{ personnel.salairePr }}</td>
+                <td>{{ personnel.cinPr }}</td>
+                <td>{{ personnel.nomPr }}</td>
+                <td>{{ personnel.numPr }}</td>
+                <td>{{ personnel.typePr }}</td>
+                <td>{{ personnel.imgPr }}</td>
+                <td>{{ personnel.fichePr }}</td>
+                <td>{{ personnel.postePr }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('personnel_show', { 'idPr': personnel.idPr }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('personnel_edit', { 'idPr': personnel.idPr }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('personnel_new') }}">Create a new personnel</a>
+        </li>
+    </ul>
+{% endblock %}

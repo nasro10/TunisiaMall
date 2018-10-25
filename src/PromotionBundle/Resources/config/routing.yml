@@ -1,0 +1,29 @@
+promotion_homepage:
+    path:     /
+    defaults: { _controller: PromotionBundle:Default:index }
+
+AjouterPromotion:
+    path:     /AjouterPromotion/{id}
+    defaults: { _controller: PromotionBundle:Promotion:ajout }
+
+ShowProd:
+    path:     /afficheProd
+    defaults: { _controller: PromotionBundle:Promotion:afficherProd }
+showPromo:
+    path:    /affichePromo
+    defaults: { _controller: PromotionBundle:Promotion:afficherPromotion }
+
+supprimePromotion:
+    path:     /supprimePromotion/{id}
+    defaults: { _controller: PromotionBundle:Promotion:supprimePromotion }
+modificationPromotion:
+    path:     /modificationPromotion/{id}
+    defaults: { _controller: PromotionBundle:Promotion:modificationPromotion }
+
+showPromoPromo:
+    path:    /affichePromoProd
+    defaults: { _controller: PromotionBundle:Promotion:afficherProdpromo }
+
+recherche:
+    path:     /afficherprix/{prix1}/{prix2}
+    defaults: { _controller: PromotionBundle:Promotion:readprix }

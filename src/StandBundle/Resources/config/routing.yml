@@ -1,0 +1,26 @@
+acceuil_nasr:
+    path:     /
+    defaults: { _controller: StandBundle:Default:index }
+
+AjouterStand:
+    path:     /AjouterStand/{id}
+    defaults: { _controller: StandBundle:Stand:ajout }
+showStand:
+    path:    /afficheStand
+    defaults: { _controller: StandBundle:Stand:afficherStand }
+ShowProp:
+    path:     /afficheProp
+    defaults: { _controller: StandBundle:Stand:afficherProp }
+supprimeStand:
+    path:     /supprimeStand/{id}
+    defaults: { _controller: StandBundle:Stand:supprimeStand }
+modificationStand:
+    path:     /modificationStand/{id}
+    defaults: { _controller: StandBundle:Stand:modificationStand }
+
+autoriserStand:
+    path:   /autoriserStand/{id}
+    defaults: { _controller: StandBundle:Stand:autorisationStand }
+
+
+

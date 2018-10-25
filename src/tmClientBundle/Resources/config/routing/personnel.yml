@@ -1,0 +1,24 @@
+personnel_index:
+    path:     /
+    defaults: { _controller: "tmClientBundle:Personnel:index" }
+    methods:  GET
+
+personnel_show:
+    path:     /{idPr}/show
+    defaults: { _controller: "tmClientBundle:Personnel:show" }
+    methods:  GET
+
+personnel_new:
+    path:     /new
+    defaults: { _controller: "tmClientBundle:Personnel:new" }
+    methods:  [GET, POST]
+
+personnel_edit:
+    path:     /{idPr}/edit
+    defaults: { _controller: "tmClientBundle:Personnel:edit" }
+    methods:  [GET, POST]
+
+personnel_delete:
+    path:     /{idPr}/delete
+    defaults: { _controller: "tmClientBundle:Personnel:delete" }
+    methods:  DELETE

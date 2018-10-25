@@ -1,0 +1,11 @@
+tm_client_personnel:
+    resource: "@tmClientBundle/Resources/config/routing/personnel.yml"
+    prefix:   /Personnel
+
+tm_client_homepage:
+    path:     /affichage
+    defaults: { _controller: tmClientBundle:Default:index }
+
+tm_personnel_new:
+    path:     /Personnel/new
+    defaults: { _controller: tmClientBundle:Personnel:new }

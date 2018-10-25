@@ -1,0 +1,29 @@
+   {% extends "base2.html.twig" %}
+   {% block body %}
+    <h2> Ajout d'une Promotion</h2>
+    {{ form_start(f2) }}
+
+
+
+    <table class="table table-order">
+        <tr>
+            <td>Date Debut</td>
+            <td>{{ form_widget(f2.date_deb) }}</td>
+        </tr>
+        <tr>
+            <td>Date Fin</td>
+            <td>{{ form_widget(f2.date_fin) }}</td>
+        </tr>
+        <tr>
+            <td>Pourcentage de Promotion</td>
+            <td>{{ form_widget(f2.prix_promo) }}</td>
+        </tr>
+
+
+    </table>
+    <br>
+
+
+    {{ form_end(f2) }}
+
+{% endblock %}

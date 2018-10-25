@@ -1,0 +1,35 @@
+{% extends "base2.html.twig" %}
+
+{% block body %}
+<h2>Liste des Stand</h2>
+</div>
+{% for i in Stand %}
+<style>
+    label { font-family: 'Trocchi', serif; font-weight: normal; line-height: 48px; margin: 0; }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+
+                </div>
+                <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8" >
+                    <div class="container" >
+
+                        <ul>
+                            <li>Date Debut: {{ i.dateDeb|date('Y-m-d') }}</li>
+                            <li>Date Fin: {{ i.dateFin |date('Y-m-d')}}</li>
+                            <li>Nom Stand: {{ i.nomS}}</li>
+                            <li>Description stand: {{ i.descS}}</li>
+                            <tr><a href="{{ path('autoriserStand',{'id':i.idS()}) }}"><button class="btn btn-outline rounded b-warning text-warning">Autoriser</button></a></tr>
+
+                            <tr><a href="{{ path('supprimeStand',{'id':i.idSa()}) }}"><button class="btn btn-outline rounded b-danger text-danger">Refuser</button></a></tr>
+                        </ul>
+                    </div></div></div></div></div>
+    <hr>
+    {% endfor %}
+    {% endblock %}
+
+

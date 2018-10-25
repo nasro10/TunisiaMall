@@ -1,0 +1,18 @@
+promotion:
+    resource: "@PromotionBundle/Resources/config/routing.yml"
+    prefix:   /promotion
+
+stand:
+    resource: "@StandBundle/Resources/config/routing.yml"
+    prefix:   /stand
+
+tm_client:
+    resource: "@tmClientBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

@@ -1,0 +1,38 @@
+{% extends "base2.html.twig" %}
+{% block body %}
+<h2>Liste des Proprietaire</h2>
+<style>
+    label { font-family: 'Trocchi', serif; font-weight: normal; line-height: 48px; margin: 0; }
+</style>
+
+
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+
+                </div>
+                <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8" >
+                    <div class="container" >
+
+
+                    </div>
+{% for i in prop %}
+    <ul class="container details">
+        <li>Nom du Proprietaire: {{ i.nomAd }}</li>
+        <li>prenom du Porprietaire: {{ i.prenomAd }}</li>
+        <li>Email: {{ i.email }}</li>
+        <li>Mot De Passe: {{ i.mdpAd }}</li>
+        <li>Adresse du Proprietaire: {{ i.adresseAd }}</li>
+        <li>Numero du Proprietaire: {{ i.numAd}}</li>
+
+        <tr><a href="{{ path('AjouterStand',{'id':i.getIdAd()})}}"><button class="btn btn-outline rounded b-success text-success">ajouter Stand</button></a></tr>
+    </ul>
+    <hr>
+{% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

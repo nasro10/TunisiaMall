@@ -1,0 +1,30 @@
+{% extends "base2.html.twig" %}
+{% block body %}
+<h2> Ajout d'un Stand</h2>
+{{ form_start(f) }}
+
+<table class="table table-order">
+    <tr>
+        <td>Date Debut</td>
+        <td>{{ form_widget(f.DateDeb) }}</td>
+    </tr>
+    <tr>
+        <td>Date Fin</td>
+        <td>{{ form_widget(f.dateFin) }}</td>
+    </tr>
+    <tr>
+        <td>Nom Stand</td>
+        <td>{{ form_widget(f.nomS) }}</td>
+    </tr>
+    <tr>
+        <td>DESCRIPTION STAND</td>
+        <td>{{ form_widget(f.descS) }}</td>
+    </tr>
+
+
+</table>
+<br>
+
+
+{{ form_end(f) }}
+{% endblock %}

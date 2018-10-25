@@ -1,0 +1,34 @@
+{% extends "base2.html.twig" %}
+
+{% block body %}
+
+    <h2>Liste des Produits</h2>
+    
+    {% for i in produit %}
+<style>
+    label { font-family: 'Trocchi', serif; font-weight: normal; line-height: 48px; margin: 0; }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+
+                </div>
+                <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8" >
+                    <div class="container" >
+
+
+        <ul class="table table-order">
+            <li >Nom du Produit: {{ i.nomP }}</li>
+            <li>Categorie du Produit: {{ i.catP }}</li>
+            <li>TVA: {{ i.tvaP }}</li>
+            <li>Disponibilité: {{ i.dispP }}</li>
+            <li>Description du Produit: {{ i.descP }}</li>
+            <li>Prix du Produit: {{ i.prixP}}Dt</li>
+        </ul>
+            <tr><a href="{{ path('AjouterPromotion',{'id':i.getIdP()})}}"><button class="btn btn-outline rounded b-success text-success">ajouter promo</button></a></tr>
+    <hr>
+    {% endfor %}
+{% endblock %}
